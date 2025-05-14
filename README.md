@@ -2,9 +2,13 @@
 
 
 az login --use-device-code
+
 az account show
+
 az acr login --name maxregistry
+
 az aks get-credentials --resource-group atom-max --name atom-max-training
+
 kubectl config use-context atom-max-training
 
 kubectl get all --all-namespaces
@@ -17,9 +21,9 @@ kubectl get deployments -n guestbook
 kubectl get services -n guestbook  
 kubectl get configmaps -n guestbook 
 
-docker tag tpaperorders:latest maxregistry.azurecr.io/tpaperorders:v1
+docker tag tpaperorders:latest maxregistry.azurecr.io/tpaperorders:v3
 docker images
-docker push maxregistry.azurecr.io/tpaperorders:v1
+docker push maxregistry.azurecr.io/tpaperorders:v3
 kubectl apply -f aks_tpaperorders-deploy.yaml
 kubectl get all --all-namespaces
 
@@ -28,3 +32,8 @@ docker images
 docker push maxregistry.azurecr.io/tpaperdelivery:v1
 kubectl apply -f aks_tpaperdelivery-deploy.yaml
 kubectl get all --all-namespaces
+
+kubectl logs tpaperdelivery-599b8cd4b7-8nxzz daprd
+kubectl logs tpaperdelivery-599b8cd4b7-8nxzz tpaperdelivery
+
+
