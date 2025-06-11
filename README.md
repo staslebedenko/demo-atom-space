@@ -36,4 +36,42 @@ kubectl get all --all-namespaces
 kubectl logs tpaperdelivery-599b8cd4b7-8nxzz daprd
 kubectl logs tpaperdelivery-599b8cd4b7-8nxzz tpaperdelivery
 
+---------------------------------------------------------------
+```
+kubectl apply -f namespace.yaml
+
+kubectl apply -f backend-configmap.yaml
+
+kubectl apply -f backend-secret.yaml
+
+kubectl apply -f backend-deployment.yaml
+
+kubectl apply -f frontend-deployment.yaml 
+
+kubectl apply -f redis-deployment.yaml
+```
+
+```
+kubectl get all -n devbcn
+```
+
+```
+docker-compose up --build
+docker-compose down
+```
+
+Port forwarding 
+
+```
+kubectl port-forward svc/backend -n devbcn 5000:5000 &
+kubectl port-forward svc/frontend -n devbcn 8080:80 &
+kubectl port-forward svc/redis -n devbcn 6379:6379 &
+```
+
+Kill tasks
+```
+taskkill /IM kubectl.exe /F
+```
+
+
 
