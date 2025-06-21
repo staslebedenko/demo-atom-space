@@ -25,10 +25,10 @@
         const BACKEND_URL = "{{BACKEND_URL}}";
         async function checkBackend(){  
             try {  
-                fetch('http://localhost:5000/api/health')  
-                    .then(response => response.text())  
-                    .then(text => console.log("Result:", text))  
-                    .catch(err => console.error("Fetch Error:", err));
+                // fetch('http://localhost:5000/api/health')  
+                //     .then(response => response.text())  
+                //     .then(text => console.log("Result:", text))  
+                //     .catch(err => console.error("Fetch Error:", err));
                     
                 const response = await fetch(`${BACKEND_URL}/api/health`);  
                 const result = await response.text();  
