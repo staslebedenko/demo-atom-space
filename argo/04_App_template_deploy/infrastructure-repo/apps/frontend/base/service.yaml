@@ -1,8 +1,9 @@
+# root/apps/frontend/base/service.yaml
 apiVersion: v1  
 kind: Service  
 metadata:  
   name: frontend  
-  namespace: devbcn  
+  namespace: devbcn-demo  
 spec:  
   selector:  
     app: frontend  

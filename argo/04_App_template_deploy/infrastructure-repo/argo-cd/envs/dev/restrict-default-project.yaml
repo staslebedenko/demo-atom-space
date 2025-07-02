@@ -1,3 +1,4 @@
+# argo-cd/envs/dev/restrict-default-project.yaml 
 apiVersion: argoproj.io/v1alpha1  
 kind: AppProject  
 metadata:  
@@ -8,4 +9,4 @@ spec:
   sourceRepos: []  
   destinations: []  
   clusterResourceWhitelist: []  
-  namespaceResourceWhitelist: []  
+  namespaceResourceWhitelist: [] 

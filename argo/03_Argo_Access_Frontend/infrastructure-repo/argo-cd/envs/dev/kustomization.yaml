@@ -1,7 +1,6 @@
 resources:  
   - ../../base  
-  - restrict-default-project.yaml  
-
+  - restrict-default-project.yaml
   - project-devbcn-demo.yaml  
   
 namespace: argocd  

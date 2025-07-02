@@ -1,11 +1,8 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
+# argo-cd/envs/dev/kustomization.yaml  
 resources:  
   - ../../base  
-  - restrict-default-project.yaml  
-
-  - project-devbcn-demo.yaml  
+  - restrict-default-project.yaml
+  - project-devbcn-demo.yaml
   
 namespace: argocd  
   

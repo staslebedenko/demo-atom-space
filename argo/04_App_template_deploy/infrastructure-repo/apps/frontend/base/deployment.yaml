@@ -1,8 +1,9 @@
+# root/apps/frontend/base/deployment.yaml
 apiVersion: apps/v1  
 kind: Deployment  
 metadata:  
   name: frontend  
-  namespace: devbcn  
+  namespace: devbcn-demo  
 spec:  
   replicas: 1  
   selector:  
